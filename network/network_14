@@ -1,0 +1,15 @@
+reverse dns 
+
+Host 81.1.51.10.in-addr.arpa. not found: 3(NXDOMAIN)
+
+Le résultat vous donne le nom de domaine associé à l' IP choisie. Le nom de domaine associé à l' IP est ce qui suit "domain name pointer". "not found" indique que l' adresse IP n'a pas de reverse déclaré. "connection timed out" indique un problème de gestion des DNS par le fournisseur, le serveur de dns ne répondant pas.
+
+A noter que de nombreuses IP n'ont pas de reverse DNS. Les serveurs de messageries doivent avoir un reverse DNS pour fonctionner correctement. De nombreux serveur smtp bloquent le trafic de mail dont le reverse DNS ne se résoud pas. Ceci permet de bloquer près de 80 % des mails envoyés par des spammeurs. Le reverse DNS peut vous aider également à savoir qui est le gestionnaire, responsable d' une IP.
+
+
+nslookup 10.51.1.81
+Server:		10.51.1.42
+Address:	10.51.1.42#53
+
+81.1.51.10.in-addr.arpa	name = ldap-proxy.42.fr.
+

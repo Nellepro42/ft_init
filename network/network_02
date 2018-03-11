@@ -1,0 +1,2 @@
+
+ifconfig -a eth0 | grep "inet addr:" | awk '{print $2}' | cut -c6-
